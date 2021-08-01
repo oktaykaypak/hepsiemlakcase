@@ -1,0 +1,232 @@
+/**Padding */
+
+.p_10 {
+    padding: $size;
+}
+
+.p_20 {
+    padding: $size * 2;
+}
+
+.p_30 {
+    padding: $size * 3;
+}
+
+
+/** Padding x*/
+
+.p_lr_10 {
+    padding-left: $size;
+    padding-right: $size;
+}
+
+.p_lr_20 {
+    padding-left: $size * 2;
+    padding-right: $size * 2;
+}
+
+.p_lr_30 {
+    padding-left: $size * 3;
+    padding-right: $size * 3;
+}
+
+
+/** Padding y*/
+
+.p_tb_10 {
+    padding-top: $size;
+    padding-bottom: $size;
+}
+
+.p_tb_20 {
+    padding-top: $size * 2;
+    padding-bottom: $size * 2;
+}
+
+.p_tb_30 {
+    padding-top: $size * 3;
+    padding-bottom: $size * 3;
+}
+
+
+/** Padding Solo
+* Left*/
+
+.p_l_10 {
+    padding-left: $size;
+}
+
+.p_l_20 {
+    padding-left: $size * 2;
+}
+
+.p_l_30 {
+    padding-left: $size * 3;
+}
+
+
+/**
+* Right*/
+
+.p_r_10 {
+    padding-right: $size;
+}
+
+.p_r_20 {
+    padding-right: $size * 2;
+}
+
+.p_r_30 {
+    padding-right: $size * 3;
+}
+
+
+/**
+* Top*/
+
+.p_t_10 {
+    padding-top: $size;
+}
+
+.p_t_20 {
+    padding-top: $size * 2;
+}
+
+.p_t_30 {
+    padding-top: $size * 3;
+}
+
+
+/**
+* Bottom*/
+
+.p_b_10 {
+    padding-bottom: $size;
+}
+
+.p_b_20 {
+    padding-bottom: $size * 2;
+}
+
+.p_b_30 {
+    padding-bottom: $size * 3;
+}
+
+
+/*
+*Margin */
+
+.m_10 {
+    margin: $size;
+    margin: $size;
+}
+
+.m_20 {
+    margin: $size * 2;
+    margin: $size * 2;
+}
+
+.m_30 {
+    margin: $size * 3;
+    margin: $size * 3;
+}
+
+
+/** Margin x*/
+
+.m_lr_10 {
+    margin-left: $size;
+    margin-right: $size;
+}
+
+.m_lr_20 {
+    margin-left: $size * 2;
+    margin-right: $size * 2;
+}
+
+.m_lr_30 {
+    margin-left: $size * 3;
+    margin-right: $size * 3;
+}
+
+
+/** Margin y*/
+
+.m_tb_10 {
+    margin-top: $size;
+    margin-bottom: $size;
+}
+
+.m_tb_20 {
+    margin-top: $size * 2;
+    margin-bottom: $size * 2;
+}
+
+.m_tb_30 {
+    margin-top: $size * 3;
+    margin-bottom: $size * 3;
+}
+
+
+/** Margin Solo
+* Left*/
+
+.m_l_10 {
+    margin-left: $size;
+}
+
+.m_l_20 {
+    margin-left: $size * 2;
+}
+
+.m_l_30 {
+    margin-left: $size * 3;
+}
+
+
+/**
+* Right*/
+
+.m_r_10 {
+    margin-right: $size;
+}
+
+.m_r_20 {
+    margin-right: $size * 2;
+}
+
+.m_r_30 {
+    margin-right: $size * 3;
+}
+
+
+/**
+* Top*/
+
+.m_t_10 {
+    margin-top: $size;
+}
+
+.m_t_20 {
+    margin-top: $size * 2;
+}
+
+.m_t_30 {
+    margin-top: $size * 3;
+}
+
+
+/**
+* Bottom*/
+
+.m_b_10 {
+    margin-bottom: $size;
+}
+
+.m_b_20 {
+    margin-bottom: $size * 2;
+}
+
+.m_b_30 {
+    margin-bottom: $size * 3;
+}

@@ -1,0 +1,13 @@
+@import 'variable',
+'spacing',
+'grid';
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.item {
+    box-shadow: inset 0px 0px 0px 1px $border-color;
+    max-width: 270px;
+}

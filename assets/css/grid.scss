@@ -1,0 +1,23 @@
+/**Grid */
+
+.row {
+    padding: 0 $size;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column_full {
+    width: $box-size
+}
+
+.column_25 {
+    width: $box-size/4
+}
+
+.column_50 {
+    width: $box-size/2;
+}
+
+.column_75 {
+    width: $box-size/4*3;
+}
