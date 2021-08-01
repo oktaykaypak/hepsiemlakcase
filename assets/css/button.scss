@@ -1,0 +1,12 @@
+.btn {
+    margin: $size/2 $size;
+    padding: $size/2 $size*2;
+    border: 0;
+    width: 100%;
+    border-radius: 2px
+}
+
+.btn_primary {
+    background-color: $primary-color;
+    color: $text-light-color;
+}
