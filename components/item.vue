@@ -24,10 +24,10 @@
       </div>
       <div class="column_50">
         <button
-          class="btn btn_primary text_large text_mid"
+          class="btn btn_primary text_large text_mid text_capitalize"
           @click="addCart(product.id)"
         >
-          Add Cart
+          {{btnText}}
         </button>
       </div>
     </div>
@@ -36,16 +36,26 @@
 
 <script>
 import productService from '../services/productCheck'
+import AddCart from '../services/AddCart'
 export default {
+  data () {
+    return {
+      btnText: 'Add Cart'
+    }
+  },
   props: ['product'],
   methods: {
-    async addCart (id) {
-      await productService.ProductCheck(id).then((res) => {
+    async addCart (basketProductid) {
+      await productService.ProductCheck(basketProductid).then((res) => {
         if (res.status === 200) {
-          console.log('anan')
+          AddCart.AddCart(basketProductid)
         }
       }).catch((err) => {
-        console.log(err.response.data.message)
+        console.log(err)
+        this.btnText = ' Out Of Stock'
+        setTimeout(() => {
+          this.btnText = 'Add Cart'
+        }, 2000)
       }
       )
     }

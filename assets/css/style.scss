@@ -31,6 +31,15 @@
     justify-content: center;
 }
 
+.content_end {
+    justify-content: flex-end;
+}
+
 .align_content_center {
     align-items: center;
+}
+div.column_full.m_20.display_flex.content_end{
+    a.btn.btn_light{
+        width: 15%;
+    }
 }
