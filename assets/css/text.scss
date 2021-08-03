@@ -24,7 +24,7 @@
 }
 
 .text_small {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 
@@ -37,4 +37,7 @@
 /* Text Capitalize*/
 .text_capitalize{
     text-transform: capitalize;
+}
+.text_uppercase{
+    text-transform: uppercase;
 }

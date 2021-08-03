@@ -5,7 +5,7 @@
 }
 
 .p_20 {
-    padding: $size * 2;
+    padding: $size * 2 !important;
 }
 
 .p_30 {
@@ -34,8 +34,8 @@
 /** Padding y*/
 
 .p_tb_10 {
-    padding-top: $size;
-    padding-bottom: $size;
+    padding-top: $size !important;
+    padding-bottom: $size !important;
 }
 
 .p_tb_20 {
@@ -115,7 +115,9 @@
 
 /*
 *Margin */
-
+.m_lr_auto{
+    margin:0 auto
+}
 .m_10 {
     margin: $size;
     margin: $size;

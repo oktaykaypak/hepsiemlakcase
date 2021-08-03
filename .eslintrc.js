@@ -16,6 +16,9 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    
+    'quotes': 'off',
+    'semi': 'off',
+    'comma-dangle': 'off'
+
   }
 }
