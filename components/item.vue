@@ -2,7 +2,7 @@
   <div class="column_50 item p_10">
     <div class="row">
       <div class="column_full display_flex content_center">
-        <img :src="product.image" alt="image" class="column_75" />
+        <img :src="product.image" alt="image" class="column_75">
       </div>
     </div>
     <div class="row">
@@ -38,29 +38,28 @@
 import productService from '../services/productCheck'
 import AddCart from '../services/AddCart'
 export default {
+  props: { product: { type: Object, default: null } },
   data () {
     return {
       btnText: 'Add Cart'
     }
   },
-  props: ['product'],
   methods: {
-    async addCart (basketProductid) {
+    async addCart (basketProductid) { // fonksiyonumuz ürünlerin localstorage üzerine eklenmesi api üzerinden stok kontrolünün yapıldığı fonksiyondur.
       await productService
-        .ProductCheck(basketProductid)
-        .then((res) => {
+        .ProductCheck(basketProductid) // productService içerisinde bulunan productCheck fonksiyonumuz ile api üzerinden ürünün 1 adeti için stok kontrolü yapılmaktadır.
+        .then((res) => { // gelen cevap eğer 200 ise
           if (res.status === 200) {
-            AddCart.AddCart(basketProductid)
-            this.btnText = 'Success'
-            setTimeout(() => {
+            AddCart.AddCart(basketProductid) // AddCart içerisinde bulunan AddCart fonksiyonumuz ile localstorage üzerine ürünümüzün id'si eklenmektedir.
+            this.btnText = 'Success' // Müşteriye ürünün eklendiğini bildirmek için başarılı ifadesini göstermekteyiz.
+            setTimeout(() => { // Müşteriye verdiğimiz uyarıyı ürün eklendi olarak değiştirmek için timeOut kullanarak düzenledik.
               this.btnText = 'Added Cart'
             }, 2000)
           }
         })
-        .catch((err) => {
-          console.log(err)
+        .catch(() => { // Stok yok uyarısı aldığımızda ise bunu catch ederek müşteriye aynı başarlı işlemde olduğu gibi stokta yok olarak da gösterdik.
           this.btnText = ' Out Of Stock'
-          setTimeout(() => {
+          setTimeout(() => { // Verdğimiz uyarıyı tekrardan eski haline getirdik.
             this.btnText = 'Add Cart'
           }, 2000)
         })

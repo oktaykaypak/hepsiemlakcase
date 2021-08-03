@@ -3,12 +3,12 @@
     <div class="row">
       <div class="column_full m_20 display_flex content_end">
         <Nuxt-link to="/basket" class="btn column_25 btn_light">
-          <i class="bi bi-basket text_large"></i> Basket
+          <i class="bi bi-basket text_large" /> Basket
         </Nuxt-link>
       </div>
     </div>
     <div class="row">
-      <item :product="data" v-for="data in product" :key="data" />
+      <item v-for="data in product" :key="data" :product="data" />
     </div>
   </div>
 </template>
@@ -18,16 +18,16 @@ import itemService from '../services/getItem'
 export default {
   data () {
     return {
-      product: null
+      product: null // producct değişkenimiz api üzerinden gelen ürünlerin tutulduğu değişkendir.
     }
   },
   mounted () {
     this.getItem()
   },
   methods: {
-    async getItem () {
-      this.product = await itemService.getItem()
-      this.product = this.product.data
+    async getItem () { // fonksiyonumuz sayfa mounted olduğu zaman tetiklenip itemService içerisinde bulunan getItem fonksiyonunu çalıştırmaktadır.
+      this.product = await itemService.getItem() // Servis üzerindeki fonksiyonlardan gelen datalar değişkenimize aktarılmaktadır.
+      this.product = this.product.data // Gelen cevap içerisideki bulunan 'data' json bilgimize erişerek ürün bilgilerini değişkenimize tekrardan aktarıyoruz.
     }
   }
 }
